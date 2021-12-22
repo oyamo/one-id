@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/chooserFragment">
+
+    <fragment
+        android:id="@+id/chooserFragment"
+        android:name="com.oyasis.diabetescare.ui.fragments.ChooserFragment"
+        android:label="fragment_chooser"
+        tools:layout="@layout/fragment_chooser" >
+        <action
+            android:id="@+id/action_chooserFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+        <action
+            android:id="@+id/action_chooserFragment_to_login"
+            app:destination="@id/login2" />
+        <action
+            android:id="@+id/action_chooserFragment_to_normalUserFragment"
+            app:destination="@id/normalUserFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/login2"
+        android:name="com.oyasis.diabetescare.ui.fragments.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_adminFragment"
+            app:destination="@id/adminFragment" />
+        <action
+            android:id="@+id/action_login_to_normalUserFragment"
+            app:destination="@id/normalUserFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adminFragment"
+        android:name="com.oyasis.diabetescare.ui.fragments.admin.AdminFragment"
+        android:label="fragment_admin"
+        tools:layout="@layout/fragment_admin" >
+        <action
+            android:id="@+id/action_adminFragment_to_addUserFragment"
+            app:destination="@id/addUserFragment" />
+        <action
+            android:id="@+id/action_adminFragment_to_statusListFragment"
+            app:destination="@id/statusListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.oyasis.diabetescare.ui.fragments.admin.AddUserFragment"
+        tools:layout="@layout/fragment_add_user"
+        android:label="AddUserFragment" />
+    <fragment
+        android:id="@+id/statusListFragment"
+        android:name="com.oyasis.diabetescare.ui.fragments.admin.StatusListFragment"
+        android:label="fragment_status_list"
+        tools:layout="@layout/fragment_status_list" >
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <argument
+            android:name="firstName"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_statusListFragment_to_updateMedicationFragment"
+            app:destination="@id/updateMedicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateMedicationFragment"
+        tools:layout="@layout/fragment_update_medication"
+        android:name="com.oyasis.diabetescare.ui.fragments.admin.UpdateMedicationFragment"
+        android:label="UpdateMedicationFragment" >
+        <action
+            android:id="@+id/action_updateMedicationFragment_to_adminFragment"
+            app:destination="@id/adminFragment" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/normalUserFragment"
+        android:name="com.oyasis.diabetescare.ui.fragments.normal.NormalUserFragment"
+        android:label="fragment_normal_user"
+        tools:layout="@layout/fragment_normal_user" >
+        <action
+            android:id="@+id/action_normalUserFragment_to_addStatusFragment"
+            app:destination="@id/addStatusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addStatusFragment"
+        android:name="com.oyasis.diabetescare.ui.fragments.normal.AddStatusFragment"
+        android:label="fragment_add_status"
+        tools:layout="@layout/fragment_add_status" >
+        <action
+            android:id="@+id/action_addStatusFragment_to_normalUserFragment"
+            app:destination="@id/normalUserFragment" />
+    </fragment>
+
+</navigation>

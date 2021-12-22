@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:contentPadding="8dp"
+    android:layout_margin="8dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="12dp"
+            android:textFontWeight="1000"
+            android:fontFamily="@font/helvetica_medium_condensed"
+            tools:text="12-12-2019 8:00PM"
+            android:textStyle="bold"
+            tools:targetApi="p" />
+
+        <TextView
+            android:id="@+id/doctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="12dp"
+            android:fontFamily="@font/helvetica_medium"
+            tools:text="Dr. Oyamo"
+            />
+
+        <TextView
+            android:id="@+id/medicText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/timeText"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="12dp"
+            android:hyphenationFrequency="full"
+            tools:text="Njoroo I see you're progressing on well. I hope you're taking fruits and drinking a lot of water as I said. Lemme book an appointment for you-"
+            />
+
+        <ImageView
+            android:id="@+id/appointmentIcon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/ic_deadline"
+            app:layout_constraintTop_toBottomOf="@id/medicText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="#656765" />
+
+        <TextView
+            android:id="@+id/appointmentDateTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/appointmentIcon"
+            app:layout_constraintTop_toTopOf="@id/appointmentIcon"
+            app:layout_constraintBottom_toTopOf="@id/appointmentAddress"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/helvetica_medium"
+            android:hyphenationFrequency="full"
+            tools:text="Dec 16th, 2019"
+            />
+
+        <TextView
+            android:id="@+id/appointmentAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hyphenationFrequency="full"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/helvetica_medium"
+            app:layout_constraintBottom_toBottomOf="@id/appointmentIcon"
+            app:layout_constraintStart_toEndOf="@id/appointmentIcon"
+            app:layout_constraintTop_toBottomOf="@id/appointmentDateTime"
+            tools:text="Address: Mater Hospital" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/appointmentGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="appointmentAddress, appointmentIcon, appointmentDateTime"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

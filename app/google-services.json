@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "219703662382",
+    "project_id": "diabetesapp-e77f1",
+    "storage_bucket": "diabetesapp-e77f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:219703662382:android:0d5b8ec8bdb990923a0cbf",
+        "android_client_info": {
+          "package_name": "com.oyasis.diabetescare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "219703662382-90p0bd92t2sep02hl6lajs1ftaeqibc5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oyasis.diabetescare",
+            "certificate_hash": "81749540260966aaa2d23da9e9bc8a068e3e963e"
+          }
+        },
+        {
+          "client_id": "219703662382-di06ht85lprqbou9feknvgcrj5ad8lbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBetv5F9sUsXyFtk2PUhphpe7NIkrc9qLI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "219703662382-di06ht85lprqbou9feknvgcrj5ad8lbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

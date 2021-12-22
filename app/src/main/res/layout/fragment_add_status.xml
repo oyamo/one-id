@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="32dp"
+    android:paddingTop="24dp"
+    android:paddingEnd="32dp"
+    tools:context=".ui.fragments.normal.AddStatusFragment">
+
+    <ImageView
+        android:id="@+id/twitterIcon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/loginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetica_medium"
+        android:textSize="48sp"
+        style="@style/TextAppearance.AppCompat.Title"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Show the doctor how you feel."
+        app:layout_constraintTop_toBottomOf="@id/twitterIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <EditText
+        android:id="@+id/statusText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:hint="Type your status here"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:enabled="true"
+        android:elevation="0dp"
+        android:background="@drawable/form_button"
+        android:fontFamily="@font/helvetica_medium"
+        android:text="Post"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/loginTitle"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/bookAppointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/statusText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Book appointment"
+        />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/statusText"
+        app:layout_constraintStart_toStartOf="@+id/statusText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
